@@ -1,0 +1,195 @@
+<!DOCTYPE html> 
+<html lang="en" ng-app="app">
+<head>
+<title>ThaiKitchen</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+   <script src="js/jquery.js"></script> 
+	<script src="js/jquery.glide.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script type="text/javascript" src="js/MyJQ.js"></script>
+    <script src="js/jquery.localScroll.min.js" type="text/javascript"></script>
+	  <script src="js/jquery.scrollTo.min.js" type="text/javascript"></script> 
+    <script src="js/wow.min.js" type="text/javascript"></script> 
+
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<!-- scroll function -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	
+	<script src="js/app.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
+
+
+</head>
+<body ng-controller="TodoListController as app">
+{{app.test}}
+<!--============ Navigation ============-->
+
+<div class="headerwrapper">
+	<div id="header" class="container">
+		<div class="logo"> <a href="#"><img src="images/LOGO.png" alt="logo" width="165" height="74"></a> </div> <!--end of Logo-->
+        <nav>
+            <ul id="navigations">
+                <li><a href="#" ng-click="app.app()">APPETIZER </a></li>
+                <li> <a href="#" ng-click="app.soup()">SOUP</a></li>
+                <li><a href="#" ng-click="app.curry()">CURRY</a></li>
+                <li><a href="#" ng-click="app.salad()">SALAD </a></li>
+                <li><a href="#">ENTREE</a></li>
+                <li><a href="#">RICE & NOODLE</a></li>
+
+            </ul>
+        </nav>
+        <br>
+      </div> <!--end of header-->
+</div> <!-- end of headerwrapper-->
+<div>
+	
+<div class="sliderwrapper ">
+      <div id="slider" class="container">
+           <div class="slider">
+           <style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+</style>
+
+
+
+
+	
+		<table >
+		  
+		
+			  <tr ng-hide="app.showApp">
+			    <td >EGG ROLLS </td>
+			    <td >Crispy vegetable roll</td>
+			    <td >$4</td>
+			  </tr>
+			  <tr ng-hide="app.showApp">
+			    <td>Crispy tofu</td>
+			    <td>Deep fried firm tofu</td>
+			    <td>$4</td>
+			  </tr>
+			  <tr ng-hide="app.showApp">
+			    <td>SUMMER ROLLS</td>
+			    <td>Fresh rice paper with fresh vegetable and shrimp or tofu</td>
+			    <td>$6</td>
+			  </tr>
+			  <tr ng-hide="app.showApp">
+			    <td>POSTICKER</td>
+			    <td>Stuffed minced chicken, water chestnut, carrot and cilantro</td>
+			    <td>$6</td>
+			  </tr>
+			  <tr ng-hide="app.showApp">
+			    <td>SATRAY</td>
+			    <td>Chicken in skewer served with peanut sauce</td>
+			    <td>$6</td>
+			  </tr>
+			   <tr ng-hide="app.showApp">
+			    <td>LETTER WRAP</td>
+			    <td>Minced chicken in sesame sauce served with lettuce</td>
+			    <td>$7</td>
+			  </tr>
+			  <tr ng-hide="app.showApp">
+			    <td>COCONUT SHRIMP</td>
+			    <td>Shrimp coated coconut flake</td>
+			    <td>$8</td>
+			  </tr>
+
+			  <tr ng-hide="app.showSoup">
+				<td>TOM YUM</td>
+				<td>Lemongrass hot and sour with your choice of chicken or shrimp (add $2) and mushroom</td>
+				<td>$5/8</td>
+			 </tr>
+			 <tr ng-hide="app.showSoup">
+				<td>TOM KHA SOUP</td>
+				<td>Thai coconut hot and sour with your choice of chicken or shrimp (add $2) and cabbage</td>
+				<td>$5/8</td>
+			 </tr>
+			  <tr ng-hide="app.showSoup">
+				<td>WANTON SOUP</td>
+				<td>Seasoning minced chicken in wanton with napa cabbage</td>
+				<td>$5/8</td>
+			 </tr>
+			 <tr ng-hide="app.showSoup">
+				<td>TOFU SOUP</td>
+				<td>Soft tofu and mix vegetable in clear broth</td>
+				<td>$5/8</td>
+			 </tr>
+			  <tr ng-hide="app.showSoup">
+				<td>TOFU SOUP</td>
+				<td>Soft tofu and mix vegetable in clear broth</td>
+				<td>$5/8</td>
+			 </tr>
+			 <tr ng-hide="app.showSoup">
+				<td>GRANNY CHICKEN SOUP</td>
+				<td>Clear broth chicken soup with potato, tomato, onion and celery</td>
+				<td>$5/8</td>
+			 </tr>
+			 
+			 <tr ng-hide="app.showSalad">
+				<td>HOUSE SALAD</td>
+				<td>Lettuce, tomato, cucumber, hardboiled egg served with peanut dressing</td>
+				<td>$7</td>
+			 </tr>
+			 <tr ng-hide="app.showSalad">
+				<td>GREEN PAPAYA SALAD</td>
+				<td>Shredded green papaya with lime dressing, tomato, green bean and crushed peanuts</td>
+				<td>$8</td>
+			 </tr>
+			  <tr ng-hide="app.showSalad">
+				<td>LARB</td>
+				<td>Your choice of minced chicken or pork in lime dressing with onion, cilantro, mint and roasted rice</td>
+				<td>$8</td>
+			 </tr>
+			 <tr ng-hide="app.showSalad">
+				<td>BEEF SALAD</td>
+				<td>Grilled beef in lime dressing with onion, cilantro, mint and roasted rice</td>
+				<td>$8</td>
+			 </tr>
+			 <tr ng-hide="app.showSalad">
+				<td>CRYSTAL NOODLE SALAD</td>
+				<td>Bean threat noodle with chicken and peanut with chili paste dressing</td>
+				<td>$8</td>
+			 </tr>
+
+			 <tr ng-hide="app.showCurry">
+				<td>CRYSTAL NOODLE SALAD</td>
+				<td>Bean threat noodle with chicken and peanut with chili paste dressing</td>
+				<td>$8</td>
+			 </tr>
+
+		</table>
+	
+
+
+		
+		
+
+		
+			
+		
+            </div>
+      </div> <!-- End of Slider-->
+</div> <!-- end of sliderwrapper-->
+
+
+
+
+</body>
+</html>
+
+
