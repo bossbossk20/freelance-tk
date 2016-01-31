@@ -36,12 +36,12 @@ new WOW().init();
 		<div class="logo"> <a href="#"><img src="images/LOGO.png" alt="logo" width="165" height="74"></a> </div> <!--end of Logo-->
         <nav>
             <ul id="navigations">
-                <li><a href="#" ng-click="app.app()">APPETIZER </a></li>
+                <li><a href="#" class="app"ng-click="app.app()">APPETIZER </a></li>
                 <li> <a href="#" ng-click="app.soup()">SOUP</a></li>
                 <li><a href="#" ng-click="app.curry()">CURRY</a></li>
                 <li><a href="#" ng-click="app.salad()">SALAD </a></li>
-                <li><a href="#">ENTREE</a></li>
-                <li><a href="#">RICE & NOODLE</a></li>
+                <li><a href="#" ng-click="app.entree()">ENTREE</a></li>
+                <li><a href="#" ng-click="app.rd()">RICE & NOODLE</a></li>
 
             </ul>
         </nav>
@@ -168,8 +168,125 @@ th, td {
 
 			 <tr ng-hide="app.showCurry">
 				<td>GREEN CURRY</td>
+				<td>Red chili paste in coconut milk with pumpkin, broccoli, bell pepper and basil</td>
+				<td>$10</td>
+			 </tr>
+			  <tr ng-hide="app.showCurry">
+				<td>RED CURRY</td>
 				<td>Green chili paste in coconut milk with bamboo shoot, eggplant, bell pepper, carrot and basil</td>
 				<td>$10</td>
+			 </tr>
+			 <tr ng-hide="app.showCurry">
+				<td>YELLOW CURRY</td>
+				<td>Turmeric curry paste in rich coconut milk with potato, onion and carrot</td>
+				<td>$10</td>
+			 </tr>
+			 <tr ng-hide="app.showCurry">
+				<td>PANAENG CURRY</td>
+				<td>Red chili paste with hint of peanut in rich coconut milk with your choice of meat, bell pepper, green bean and basil
+				</td>
+				<td>$10</td>
+			 </tr>
+			 	 <tr ng-hide="app.showCurry">
+				<td>MUSSAMAN CURRY</td>
+				<td>Stewed beef in coconut curry with potato, onion and peanuts</td>
+				<td>$12</td>
+			 </tr>
+			 <tr ng-hide="app.showCurry">
+				<td>PINEAPPLE CURRY</td>
+				<td>Shrimp, pineapple, tomato and basil with red chili paste in coconut milk</td>
+				<td>$12</td>
+			 </tr>
+			  </tr>
+			 	 <tr ng-hide="app.showEntree">
+				<td>SPICY BASIL</td>
+				<td>Sautéed green bean, jalapeno, onion and basil with your choice of meat in garlic sauce</td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showEntree">
+				<td>GARLIC EGGPLANT </td>
+				<td>Sautéed Thai eggplant, onion and basil with your choice of meat in garlic sauce</td>
+				<td>$9</td>
+			 </tr>
+			  <tr ng-hide="app.showEntree">
+				<td>CASHEW DELIGHT </td>
+				<td>Water chestnut, carrot, bell pepper, onion and cashew nut sautéed with your choice of meat</td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showEntree">
+				<td>GINGER LOVER</td>
+				<td>Your choice of meat sautéed with fresh ginger root, onion, celery, carrot and mushroom</td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showEntree">
+				<td>GARLIC AND PEPPER</td>
+				<td>Sautéed roasted garlic and pepper with your choice of meat served with cucumber</td>
+				<td>$9</td>
+			 </tr>
+			  <tr ng-hide="app.showEntree">
+				<td>GARLIC AND PEPPER</td>
+				<td>Sautéed roasted garlic and pepper with your choice of meat served with cucumber</td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showEntree">
+				<td>VEGETABLE DELIGHT</td>
+				<td>Mix vegetable sautéed in garlic sauce with your choice of meat</td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showEntree">
+				<td>SWEET AND SOUR</td>
+				<td>Breaded your choice of meat in house tomato sauce pineapple, onion, cucumber </td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showEntree">
+				<td>BROCCOLI ON WOK</td>
+				<td>Sautéed broccoli in oyster sauce with your choice of meat</td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showRD">
+				<td>THAI FRIED RICE</td>
+				<td>Stir fried jasmine rice with your choice of meat, broccoli, onion, pea, carrot and egg</td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showRD">
+				<td>SPICY FRIED RICE</td>
+				<td>Stir fried jasmine rice with garlic sauce, onion, jalapeno, basil and your choice of meat</td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showRD">
+				<td>PINEAPPLE FRIED RICE</td>
+				<td>Pineapple, cashew nuts, raisin, egg with jasmine rice and your choice of meat</td>
+				<td>$9</td>
+			 </tr>
+			  <tr ng-hide="app.showRD">
+				<td>PAD THAI</td>
+				<td>Pan-fried rice noodles with eggs, bean sprouts, green onions, tofu and ground peanuts</td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showRD">
+				<td>PAD SE-IEW</td>
+				<td>Stir-fried wide rice noodles in sweet black soy sauce broccoli, egg and your choice of meat</td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showRD">
+				<td>CHICKEN NOODLE</td>
+				<td>Wide rice noodles with chicken, egg, bean sprout, onion, peanuts and lettuce</td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showRD">
+				<td>SPICY NOODLE </td>
+				<td>Wide rice noodles in garlic sauce with onion, jalapeno and basil with your choice of meat</td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showRD">
+				<td>CRYSTAL NOODLE</td>
+				<td>Bean thread noodles stir fried with onions, eggs, broccoli, carrot, bean sprout and choice of meat</td>
+				<td>$9</td>
+			 </tr>
+			 <tr ng-hide="app.showRD">
+				<td>LARD NA</td>
+				<td>Wide noodles topped with gravy with choice of meat and broccoli</td>
+				<td>$9</td>
 			 </tr>
 
 		</table>

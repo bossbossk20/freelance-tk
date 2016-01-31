@@ -13,15 +13,14 @@ body {background:url(../images/BG.jpg); margin:0px; padding:0px; font-family:han
 .container {width:1100px; margin:auto;}
 *{margin:0px; padding:0px;}
 .fixedheader {
-    position: fixed;
+    
     top:0; left:0; right:0px; z-index:2000;
     width: 100%;}
 
 .clearfix{clear:both;}
 
 .logo{
-  width : "165" ;
-  height: "74" ;
+  
 }
 
 iframe {width:100%; height:100%; border:0px; margin:0px; padding:0px; }
@@ -35,15 +34,15 @@ iframe {width:100%; height:100%; border:0px; margin:0px; padding:0px; }
 /*||||||||||||||||||||||||||||||||| HEADER ||||||||||||||||||||||||||||||*/
 
 .headerwrapper{background:white; overflow:hidden; /*box-shadow: 0px 1px 3px 1px  rgba(50, 50, 50, 0.35);*/
- height:105px; margin:0px; padding:0px; border-bottom:1px solid  rgba(0,0,0,0.20); margin-bottom:50px;
+ height:240px; margin:0px; padding:0px; border-bottom:1px solid  rgba(0,0,0,0.20); margin-bottom:50px;
  /*position:fixed; left:0px; top:0px; right:0px; z-index:2000;*/ }
 #header{  overflow:hidden;   }
-.headerwrapper .logo {float:left; line-height:130px; margin-top:15px; }
+.headerwrapper .logo {float:left; }
 .headerwrapper nav ul{font-family:Arial; float:right; font-size:16px; font-weight:bold; margin-top:15px; }
 /*.headerwrapper nav  li{list-style:none; float:left; margin:20px; padding:15px; }
 .headerwrapper nav  li a {text-decoration:none; color:#313131; }
 */
-.headerwrapper nav ul li {list-style:none; float:left; margin:20px; padding:15px;}
+.headerwrapper nav ul li {list-style:none; float:left; margin:20px; margin-top:100px; padding:15px;}
 .headerwrapper nav ul li a{text-decoration:none; color:#313131;}
 .headerwrapper nav ul li:hover{background:#ff5a0b; border-radius:5px; color:#FFF; transition:all 0.5s;
 animation:rubberBand 0.9s; -webkit-animation:rubberBand 0.9s;}
@@ -52,7 +51,8 @@ animation:rubberBand 0.9s; -webkit-animation:rubberBand 0.9s;}
 
 /*.headerwrapper nav li a :hover{background:#ff5a0b; border-radius:5px; color:white; transition:all 0.5s ;
  animation:rubberBand 0.9s; -webkit-animation:rubberBand 0.9s;}*/
-.active{background:#ff5a0b; border-radius:5px; color:white; }
+.active{background:#ff5a0b; border-radius:5px; color:#FFF; transition:all 0.5s;
+animation:rubberBand 0.9s; -webkit-animation:rubberBand 0.9s;}
 
 
 
