@@ -1,24 +1,24 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
 <title>ThaiKitchen</title>
-    
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-   <script src="js/jquery.js"></script> 
+
+   <script src="js/jquery.js"></script>
 	<script src="js/jquery.glide.js"></script>
-    
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
     <script type="text/javascript" src="js/MyJQ.js"></script>
     <script src="js/jquery.localScroll.min.js" type="text/javascript"></script>
-	  <script src="js/jquery.scrollTo.min.js" type="text/javascript"></script> 
-    <script src="js/wow.min.js" type="text/javascript"></script> 
+	  <script src="js/jquery.scrollTo.min.js" type="text/javascript"></script>
+    <script src="js/wow.min.js" type="text/javascript"></script>
 
 	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <!-- scroll function -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-	
+
 	<script src="js/app.js"></script>
 <script src="js/wow.min.js"></script>
 <script>
@@ -33,15 +33,15 @@ new WOW().init();
 
 <div class="headerwrapper">
 	<div id="header" class="container">
-		<div class="logo"> <a href="#"><img src="images/LOGO.png" alt="logo" width="165" height="74"></a> </div> <!--end of Logo-->
+		<div class="logo"> <a href="#"><img src="images/logo2.png" alt="logo" height="200px"></a> </div>
         <nav>
             <ul id="navigations">
                 <li><a href="#" class="app"ng-click="app.app()">APPETIZER </a></li>
-                <li> <a href="#" ng-click="app.soup()">SOUP</a></li>
-                <li><a href="#" ng-click="app.curry()">CURRY</a></li>
-                <li><a href="#" ng-click="app.salad()">SALAD </a></li>
-                <li><a href="#" ng-click="app.entree()">ENTREE</a></li>
-                <li><a href="#" ng-click="app.rd()">RICE & NOODLE</a></li>
+                <li> <a href="#" class="soup" ng-click="app.soup()">SOUP</a></li>
+                <li><a href="#"  class="curry" ng-click="app.curry()">CURRY</a></li>
+                <li><a href="#" class="salad" ng-click="app.salad()">SALAD </a></li>
+                <li><a href="#" class="entree" ng-click="app.entree()">ENTREE</a></li>
+                <li><a href="#" class="rd" ng-click="app.rd()">RICE & NOODLE</a></li>
 
             </ul>
         </nav>
@@ -49,7 +49,7 @@ new WOW().init();
       </div> <!--end of header-->
 </div> <!-- end of headerwrapper-->
 <div>
-	
+
 <div class="sliderwrapper ">
       <div id="slider" class="container">
            <div class="slider">
@@ -69,10 +69,10 @@ th, td {
 
 
 
-	
+
 		<table >
-		  
-		
+
+
 			  <tr ng-hide="app.showApp">
 			    <td >EGG ROLLS </td>
 			    <td >Crispy vegetable roll</td>
@@ -139,7 +139,7 @@ th, td {
 				<td>Clear broth chicken soup with potato, tomato, onion and celery</td>
 				<td>$5/8</td>
 			 </tr>
-			 
+
 			 <tr ng-hide="app.showSalad">
 				<td>HOUSE SALAD</td>
 				<td>Lettuce, tomato, cucumber, hardboiled egg served with peanut dressing</td>
@@ -290,15 +290,15 @@ th, td {
 			 </tr>
 
 		</table>
-	
 
 
-		
-		
 
-		
-			
-		
+
+
+
+
+
+
             </div>
       </div> <!-- End of Slider-->
 </div> <!-- end of sliderwrapper-->
@@ -308,5 +308,3 @@ th, td {
 
 </body>
 </html>
-
-

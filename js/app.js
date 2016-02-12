@@ -2,13 +2,13 @@ angular.module('app', [])
   .controller('TodoListController', function() {
     var app = this;
     app.test=  "hello"
-    app.showApp = false 
+    app.showApp = false
     app.showSoup = true
     app.showSalad = true
     app.showCurry = true
     app.showEntree = true
     app.showRD = true
-
+     $('.app').addClass( "active" );
 
     app.app = function(){
       app.showApp = false
@@ -18,7 +18,13 @@ angular.module('app', [])
       app.showEntree = true
       app.showRD = true
 
-     $('.app').addClass( "active" );
+     $('.app').addClass( "active" )
+     $('.soup').removeClass( "active")
+     $('.curry').removeClass( "active" )
+     $('.salad').removeClass("active")
+     $('.entree').removeClass("active")
+     $('.rd').removeClass("active")
+
     }
 
     app.soup = function(){
@@ -28,6 +34,12 @@ angular.module('app', [])
       app.showCurry = true
       app.showEntree = true
       app.showRD = true
+      $('.soup').addClass("active")
+      $('.app').removeClass( "active")
+      $('.salad').removeClass( "active")
+      $('.curry').removeClass( "active")
+      $('.entree').removeClass( "active")
+      $('.rd').removeClass( "active")
     }
     app.salad = function(){
       app.showSalad = false
@@ -36,6 +48,12 @@ angular.module('app', [])
       app.showCurry = true
       app.showEntree = true
       app.showRD = true
+      $('.salad').addClass("active")
+      $('.app').removeClass( "active")
+      $('.soup').removeClass( "active")
+      $('.curry').removeClass( "active")
+      $('.entree').removeClass( "active")
+      $('.rd').removeClass( "active")
     }
     app.curry = function(){
       app.showApp = true
@@ -44,6 +62,12 @@ angular.module('app', [])
       app.showSoup  = true
       app.showEntree = true
       app.showRD = true
+      $('.curry').addClass("active")
+      $('.app').removeClass( "active")
+      $('.salad').removeClass( "active")
+      $('.soup').removeClass( "active")
+      $('.entree').removeClass( "active")
+      $('.rd').removeClass( "active")
 
     }
      app.entree = function(){
@@ -53,7 +77,12 @@ angular.module('app', [])
       app.showSoup  = true
       app.showEntree = false
       app.showRD = true
-
+      $('.entree').addClass('active')
+      $('.app').removeClass( "active")
+      $('.salad').removeClass( "active")
+      $('.curry').removeClass( "active")
+      $('.soup').removeClass( "active")
+      $('.rd').removeClass( "active")
 
 
     }
@@ -64,8 +93,15 @@ angular.module('app', [])
       app.showSoup  = true
       app.showEntree = true
       app.showRD = false
+      $('.rd').addClass('active')
+      $('.app').removeClass( "active")
+      $('.salad').removeClass( "active")
+      $('.curry').removeClass( "active")
+      $('.entree').removeClass( "active")
+      $('.soup').removeClass( "active")
+
     }
-    
+
 
 
   })
