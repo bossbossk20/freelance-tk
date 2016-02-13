@@ -22,6 +22,16 @@ body {background:url(../images/BG.jpg); margin:0px; padding:0px; font-family:han
 
 }
 
+.icon{
+  width: auto;
+  height: 30px;
+}
+.menuTitle{
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
 iframe {width:100%; height:100%; border:0px; margin:0px; padding:0px; }
 
 
@@ -53,13 +63,13 @@ animation:rubberBand 0.9s; -webkit-animation:rubberBand 0.9s;}
 
 .headerwrapper nav ul li:hover a{color:white;}
 
-
+.moreMenu {
+  text-decoration:none;
+  color:#cf0f1e
+}
 /*.headerwrapper nav li a :hover{background:#ff5a0b; border-radius:5px; color:white; transition:all 0.5s ;
  animation:rubberBand 0.9s; -webkit-animation:rubberBand 0.9s;}*/
 
-.active{
-
-}
 
 /*||||||||||||||||||||||||||||||||| SLIDER ||||||||||||||||||||||||||||||*/
 .sliderwrapper { margin-top:30px;}
@@ -79,16 +89,15 @@ float:left; margin-left:45px;}
 	overflow: hidden;
 }
 
+.sliderwrapperMenu .slider {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+}
+
 .sliderwrapper .slides {
 	height: 100%;
-
-	/* Clear fix */
-
-
-	/**
-	 * Prevent blinking issue
-	 * Not tested. Experimental.
-	 */
 	-webkit-backface-visibility: hidden;
 	-webkit-transform-style: preserve-3d;
 }
@@ -263,50 +272,43 @@ float:left; margin-left:45px;}
 
 /*||||||||||||||||||||||||||||||||| CONTACT US ||||||||||||||||||||||||||||||*/
 
-.contactwrapper{margin-top:50px; text-align:center;}
+.contactwrapper{
+   margin-top:50px;
+   text-align:center;
+   height: 350px;
+
+ }
 .contactwrapper h3{ color:#cf0e1e; font-size:35px;  letter-spacing:8px; font-family:Economica-bold; margin-top:30px; margin-bottom:50px;}
 
 .contactwrapper  h3::before{content:url(../images/rectangle.png); position:relative; margin-right:15px;
   top:-10px;}
 .contactwrapper  h3::after{content:url(../images/rectangle.png); position:relative;  margin-left:15px;
  top:-10px;}
-  .contactwrapper .staff{ position:absolute;}
+
+ .address{
+   color:#cf0e1e;
+   font-size:35px;
+   letter-spacing:8px;
+   font-family:Economica-bold;
+   margin-top:30px;
+   margin-bottom:50px;
+   }
+
+
+
+
  /*.contactwrapper .staff ul li img{border:3px solid #ff5a0b; border-radius:5px; margin:0px 3px 0px 3px; position:relative;
  opacity:0.4; }*/
-.myimage2,.myimage3,.myimage4,.myimage5,.myimage6{border:3px solid #ff5a0b; border-radius:5px; margin:0px 3px 0px 3px; position:relative;
- opacity:0.4; cursor:pointer;}
- .myimage{border:3px solid #ff5a0b; border-radius:5px; margin:0px 3px 0px 3px; position:relative;
- opacity:0.4; cursor:pointer;}
 
- .staff ul {list-style:none;}
-  .staff ul li{float:left;}
- .pop{}
-.firstpop{position:relative; left:-60px; top:180px;  z-index:999; opacity:1;}
-.secondpop{position:relative; left:-360px; top:180px; ; z-index:900; opacity:0;}
-.thirdpop{position:relative; left:300px; top:35px;  z-index:900; opacity:0; }
-.fourthpop{position:relative; left:-20px; top:35px;  z-index:900; opacity:0; }
-.fifthpop{position:relative; left:490px; top:-108px;  z-index:900; opacity:0; }
-.sixthpop{position:relative; left:0px; top:-108px;  z-index:900; opacity:0; }
 
 
 /************************ FOOTER *****************************/
-.footerwrapper{height:530px; background:#252b33; margin-top:-50px; border-top:4px solid #a8aaad;}
+.footerwrapper{height:220px; background:#252b33; margin-top:-50px; border-top:4px solid #a8aaad;}
 footer{text-align:center; }
 footer h2{font-family:OSWALD-regular; font-size:20px; color:#dedede;}
 
 footer h2{margin-bottom:40px;}
 
-/**** Customer Reviews*****/
-
-.customerreview{width:366px;  float:left; margin-top:30px; }
-.review{margin-top:5px; text-align:left;}
-.review p{color:#a3c9e7; font-size:15px; font-family:hansen; }
-.review span2{color:#d6d6d6; font-size:26px; font-family:hansen;}
-.customerreview h2{text-align:left;}
-
-.review h4{color:#3d6e96; font-size:27px; font-family:oswald-regular; float:left; margin-left:14px; margin-top:7px; margin-bottom:7px;}
-.line{width:340px; height:1px; color:#72859e; background:#72859e;}
-.space{width:340px; height:1px; color:#72859e; background:#72859e; clear:both; position:relative; top:10px;}
 
 /**** socialize*****/
 
@@ -317,35 +319,6 @@ footer h2{margin-bottom:40px;}
 .socialimgs img {}
 .socialize h2{text-align:left;margin-left:100px;}
 
-/**** feedback*****/
-
-.sendfeedback{width:366px;  float:right; margin-top:30px; margin-bottom:30px; text-align:left;}
-.sendfeedback h2{ margin-left:3px;}
-.sendfeedback form{}
-.sendfeedback form input[type='text']{width:367px; height:57px; border-radius:5px; border:1px solid #0a131f;
-background:#32363d; color:white; font-size:18px; padding:5px;}
-
-.sendfeedback form textarea {width:367px; height:90px; border-radius:5px; border:1px solid #0a131f;
-background:#32363d; color:white; font-size:18px; padding:5px;}
-
-
-.sendfeedback form h6{color:#cccccc; font-size:18px; font-family:OSWALD-regular; margin-top:20px;}
-.sendfeedback form button{ background:#3d6e96; color:#1f527b; font-size:16px; font-family:OSWALD-regular; width:95px;
-height:29px; border:0px; border-radius:4px; margin-top:20px; cursor:pointer; }
-
-/* Hover */
-
-.sendfeedback form textarea:hover,.sendfeedback form textarea:focus{border:1px solid #3d6e96;}
-.sendfeedback form input[type='text']:hover,.sendfeedback form input[type='text']:focus{border:1px solid #3d6e96;}
-.sendfeedback form button:hover{animation:rubberBand 0.9s;  -webkit-animation:rubberBand 0.9s}
-
-/*||||||||||||||||||||||||||||||||| COPY RIGHTS ||||||||||||||||||||||||||||||*/
-
- .copyrightswrapper{height:45px; background:#3c4149; color:#f2f2f2; font-family:oswald-bold; font-size:15px; line-height:45px; text-align:center;}
-
-  #copyrights a{text-decoration:none; color:#a3c9e7;}
-  #copyrights p{ animation: shake 5s infinite; -webkit-animation:shake 5s infinite; text-align:center;}
-  #copyrights p:hover{}
 
  /*||||||||||||||||||||||||||||||||| ANIMATIONS ||||||||||||||||||||||||||||||*/
 
