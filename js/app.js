@@ -1,7 +1,7 @@
 angular.module('app', [])
   .controller('TodoListController', function() {
     var app = this;
-    app.test=  "hello"
+    // app.test=  "hello"
     app.showApp = false
     app.showSoup = true
     app.showSalad = true
