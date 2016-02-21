@@ -36,12 +36,9 @@ new WOW().init();
 		<div class="logo"> <a href="index.html"><img src="images/logo2.png" alt="logo" height="200px"></a> </div>
         <nav>
             <ul id="navigations">
-                <li><a href="#" class="app"ng-click="app.app()">APPETIZER </a></li>
-                <li> <a href="#" class="soup" ng-click="app.soup()">SOUP</a></li>
-                <li><a href="#"  class="curry" ng-click="app.curry()">CURRY</a></li>
-                <li><a href="#" class="salad" ng-click="app.salad()">SALAD </a></li>
-                <li><a href="#" class="entree" ng-click="app.entree()">ENTREE</a></li>
-                <li><a href="#" class="rd" ng-click="app.rd()">RICE & NOODLE</a></li>
+                <li><a href="#" class="food"ng-click="app.food()">Food</a></li>
+                <li> <a href="#" class="drink" ng-click="app.drink()">Drink</a></li>
+
 
             </ul>
         </nav>
@@ -68,283 +65,221 @@ th, td {
 
 
 
-<h3 ng-hide="app.showCurry">SERVED WITH STEAMED RICE CHOICE OF CHICKEN, BEEF, PORK, TOFU OR SHRIMP (ADD$2)</h3>
-<h3 ng-hide="app.showEntree">SERVED WITH STEAMED RICE CHOICE OF CHICKEN, BEEF, PORK, TOFU OR SHRIMP (ADD$2)</h3>
+
 <br>
 		<table >
 
-
-			  <tr ng-hide="app.showApp">
+      <tbody ng-show="app.pageFood === 1">
+        <tr ng-hide="app.showFood">
+          <td><img class="img" src="images/menu1.jpg" alt=""></td>
 			    <td class="menuTitle">EGG ROLLS </td>
           <td></td>
 			    <td >Crispy vegetable roll</td>
-			    <td >$4</td>
+			    <td >40</td>
+          <td><button class="add" ng-click="app.addFood('menu1.jpg','Egg rolls',40)">Add</button></td>
+
 			  </tr>
-			  <tr ng-hide="app.showApp">
+			  <tr ng-hide="app.showFood">
+          <td><img class="img" src="images/menu2.jpg" alt=""></td>
 			    <td class="menuTitle">Crispy tofu</td>
           <td></td>
 			    <td>Deep fried firm tofu</td>
-			    <td>$4</td>
+			    <td>40</td>
+          <td><button class="add" ng-click="app.addFood('menu2.jpg','Crispy tofu',40)">Add</button></td>
 			  </tr>
-			  <tr ng-hide="app.showApp">
+			  <tr ng-hide="app.showFood">
+          <td><img class="img" src="images/menu3.jpg" alt=""></td>
 			    <td class="menuTitle">SUMMER ROLLS</td>
           <td></td>
 			    <td>Fresh rice paper with fresh vegetable and shrimp or tofu</td>
-			    <td>$6</td>
+			    <td>60</td>
+          <td><button class="add" ng-click="app.addFood('menu3.jpg','SUMMER ROLLS',60)">Add</button></td>
 			  </tr>
-			  <tr ng-hide="app.showApp">
+			  <tr ng-hide="app.showFood">
+          <td><img class="img" src="images/menu4.jpg" alt=""></td>
 			    <td class="menuTitle">POSTICKER</td>
           <td></td>
 			    <td>Stuffed minced chicken, water chestnut, carrot and cilantro</td>
-			    <td>$6</td>
+			    <td>60</td>
+          <td><button class="add" ng-click="app.addFood('menu4.jpg','POSTICKER',60)">>Add</button></td>
 			  </tr>
-			  <tr ng-hide="app.showApp">
-			    <td class="menuTitle">SATRAY  </td>
+			  <tr ng-hide="app.showFood">
+          <td><img class="img" src="images/menu5.jpg" alt=""></td>
+			    <td class="menuTitle">SATAY  </td>
           <td><img class="icon" src="images/peanut.png" ></td>
 			    <td>Chicken in skewer served with peanut sauce</td>
-			    <td>$6</td>
+			    <td>60</td>
+          <td><button class="add" ng-click="app.addFood('menu5.jpg','SATAY',60)">>Add</button></td>
 			  </tr>
-			   <tr ng-hide="app.showApp">
-			    <td class="menuTitle">LETTER WRAP</td>
+			   <tr ng-hide="app.showFood">
+           <td><img class="img" src="images/menu6.jpg" alt=""></td>
+			    <td class="menuTitle">PAD THAI</td>
           <td></td>
-			    <td>Minced chicken in sesame sauce served with lettuce</td>
-			    <td>$7</td>
+			    <td>Pan-fried rice noodles with eggs, bean sprouts, green onions, tofu and ground peanuts</td>
+			    <td>70</td>
+          <td><button class="add" ng-click="app.addFood('menu6.jpg','PAD THAI',70)">Add</button></td>
 			  </tr>
-			  <tr ng-hide="app.showApp">
+			  <tr ng-hide="app.showFood">
+          <td><img class="img" src="images/menu7.jpg" alt=""></td>
 			    <td class="menuTitle">COCONUT SHRIMP</td>
           <td></td>
 			    <td>Shrimp coated coconut flake</td>
-			    <td>$8</td>
+			    <td>80</td>
+          <td><button class="add" ng-click="app.addFood('menu7.jpg','COCONUT SHRIMP',80)">Add</button></td>
 			  </tr>
 
-			  <tr ng-hide="app.showSoup">
+			  <tr ng-hide="app.showFood">
+        <td><img class="img" src="images/menu8.jpg" alt=""></td>
 				<td class="menuTitle">TOM YUM</td>
-        <td></td>
+        <td><img class="icon" src="images/chili.png" alt=""></td>
 				<td>Lemongrass hot and sour with your choice of chicken or shrimp (add $2) and mushroom</td>
-				<td>$5/8</td>
+				<td>50</td>
+        <td><button class="add" ng-click="app.addFood('menu8.jpg','TOM YUM',50)">Add</button></td>
 			 </tr>
-			 <tr ng-hide="app.showSoup">
-				<td class="menuTitle">TOM KHA SOUP</td>
-        <td></td>
-				<td>Thai coconut hot and sour with your choice of chicken or shrimp (add $2) and cabbage</td>
-				<td>$5/8</td>
-			 </tr>
-			  <tr ng-hide="app.showSoup">
-				<td class="menuTitle">WANTON SOUP</td>
-        <td></td>
-				<td>Seasoning minced chicken in wanton with napa cabbage</td>
-				<td>$5/8</td>
-			 </tr>
-			 <tr ng-hide="app.showSoup">
-				<td class="menuTitle">TOFU SOUP</td>
-        <td></td>
-				<td>Soft tofu and mix vegetable in clear broth</td>
-				<td>$5/8</td>
-			 </tr>
-			  <tr ng-hide="app.showSoup">
-				<td class="menuTitle">TOFU SOUP</td>
-        <td></td>
-				<td>Soft tofu and mix vegetable in clear broth</td>
-				<td>$5/8</td>
-			 </tr>
-			 <tr ng-hide="app.showSoup">
-				<td class="menuTitle">GRANNY CHICKEN SOUP</td>
-        <td></td>
-				<td>Clear broth chicken soup with potato, tomato, onion and celery</td>
-				<td>$5/8</td>
-			 </tr>
-
-			 <tr ng-hide="app.showSalad">
-				<td class="menuTitle">HOUSE SALAD</td>
-        <td></td>
-				<td>Lettuce, tomato, cucumber, hardboiled egg served with peanut dressing</td>
-				<td>$7</td>
-			 </tr>
-			 <tr ng-hide="app.showSalad">
-				<td class="menuTitle">GREEN PAPAYA SALAD </td>
-        <td><img class="icon" src="images/peanut.png" ></td>
-				<td>Shredded green papaya with lime dressing, tomato, green bean and  crushed peanuts</td>
-				<td>$8</td>
-			 </tr>
-			  <tr ng-hide="app.showSalad">
-				<td class="menuTitle">LARB</td>
-        <td></td>
-				<td>Your choice of minced chicken or pork in lime dressing with onion, cilantro, mint and roasted rice</td>
-				<td>$8</td>
-			 </tr>
-			 <tr ng-hide="app.showSalad">
-				<td class="menuTitle">BEEF SALAD</td>
-        <td></td>
-				<td>Grilled beef in lime dressing with onion, cilantro, mint and roasted rice</td>
-				<td>$8</td>
-			 </tr>
-
-			 <tr ng-hide="app.showSalad">
-				<td class="menuTitle">
-
-          CRYSTAL NOODLE SALAD
-        </td>
-        <td> <img class="icon" src="images/peanut.png" alt=""></td>
-				<td>Bean threat noodle with chicken and peanut with chili paste dressing</td>
-				<td>$8</td>
-			 </tr>
-
-			 <tr ng-hide="app.showCurry">
-				<td class="menuTitle">GREEN CURRY</td>
-        <td><img class="icon" src="images/chili.png" alt=""></td>
-				<td>Red chili paste in coconut milk with pumpkin, broccoli, bell pepper and basil</td>
-				<td>$10</td>
-			 </tr>
-			  <tr ng-hide="app.showCurry">
-				<td class="menuTitle">RED CURRY</td>
-        <td><img class="icon" src="images/chili.png" alt=""></td>
-				<td>Green chili paste in coconut milk with bamboo shoot, eggplant, bell pepper, carrot and basil</td>
-				<td>$10</td>
-			 </tr>
-			 <tr ng-hide="app.showCurry">
-				<td class="menuTitle">YELLOW CURRY</td>
-        <td><img class="icon" src="images/chili.png" alt=""></td>
-				<td>Turmeric curry paste in rich coconut milk with potato, onion and carrot</td>
-				<td>$10</td>
-			 </tr>
-			 <tr ng-hide="app.showCurry">
-				<td class="menuTitle">PANAENG CURRY</td>
-        <td></td>
-				<td>Red chili paste with hint of peanut in rich coconut milk with your choice of meat, bell pepper, green bean and basil
-				</td>
-				<td>$10</td>
-			 </tr>
-			 	 <tr ng-hide="app.showCurry">
-				<td class="menuTitle"> MUSSAMAN CURRY  </td>
-        <td><img class="icon" src="images/chili.png" alt=""> <img class="icon" src="images/peanut.png" ></td>
-				<td>Stewed beef in coconut curry with potato, onion and peanuts</td>
-				<td>$12</td>
-			 </tr>
-			 <tr ng-hide="app.showCurry">
-				<td class="menuTitle">PINEAPPLE CURRY</td>
-        <td><img class="icon" src="images/chili.png" alt=""></td>
-				<td>Shrimp, pineapple, tomato and basil with red chili paste in coconut milk</td>
-				<td>$12</td>
-			 </tr>
-			  </tr>
-			 <tr ng-hide="app.showEntree">
-				<td class="menuTitle">SPICY BASIL</td>
-        <td></td>
-				<td>Sautéed green bean, jalapeno, onion and basil with your choice of meat in garlic sauce</td>
-				<td>$9</td>
-			 </tr>
-			 <tr ng-hide="app.showEntree">
+       <tr ng-hide="app.showFood">
+         <!-- ////////////////////////////////////////////////////// -->
+        <td><img class="img" src="images/menu9.jpg" alt=""></td>
 				<td class="menuTitle">GARLIC EGGPLANT </td>
         <td></td>
 				<td>Sautéed Thai eggplant, onion and basil with your choice of meat in garlic sauce</td>
-				<td>$9</td>
+				<td>90</td>
+        <td><button class="add" ng-click="app.addFood('menu9.jpg','GARLIC EGGPLANT',90)">Add</button></td>
 			 </tr>
-			  <tr ng-hide="app.showEntree">
+			  <tr ng-hide="app.showFood">
+        <td><img class="img" src="images/menu10.jpg" alt=""></td>
 				<td class="menuTitle">CASHEW DELIGHT </td>
         <td><img class="icon" src="images/peanut.png" alt=""></td>
 				<td>Water chestnut, carrot, bell pepper, onion and cashew nut sautéed with your choice of meat</td>
-				<td>$9</td>
+				<td>90</td>
+        <td><button class="add" ng-click="app.addFood('menu10.jpg','CASHEW DELIGHT ',90)">Add</button></td>
 			 </tr>
-			 <tr ng-hide="app.showEntree">
-				<td class="menuTitle">GINGER LOVER</td>
-        <td></td>
-				<td>Your choice of meat sautéed with fresh ginger root, onion, celery, carrot and mushroom</td>
-				<td>$9</td>
-			 </tr>
-			 <tr ng-hide="app.showEntree">
+      </tbody>
+      <tbody ng-show="app.pageFood === 2">
+			  <tr ng-hide="app.showFood">
+        <td><img class="img" src="images/menu11.jpg" alt=""></td>
 				<td class="menuTitle">GARLIC AND PEPPER</td>
         <td></td>
 				<td>Sautéed roasted garlic and pepper with your choice of meat served with cucumber</td>
-				<td>$9</td>
+				<td>90</td>
+        <td><button class="add" ng-click="app.addFood('menu11.jpg','GARLIC AND PEPPER',90)">Add</button></td>
 			 </tr>
-			  <tr ng-hide="app.showEntree">
-				<td class="menuTitle">GARLIC AND PEPPER</td>
-        <td></td>
-				<td>Sautéed roasted garlic and pepper with your choice of meat served with cucumber</td>
-				<td>$9</td>
-			 </tr>
-			 <tr ng-hide="app.showEntree">
+			 <tr ng-hide="app.showFood">
+        <td><img class="img" src="images/menu12.jpg" alt=""></td>
 				<td class="menuTitle">VEGETABLE DELIGHT</td>
         <td></td>
 				<td>Mix vegetable sautéed in garlic sauce with your choice of meat</td>
-				<td>$9</td>
+				<td>90</td>
+        <td><button class="add" ng-click="app.addFood('menu12.jpg','VEGETABLE DELIGHT',90)">Add</button></td>
 			 </tr>
-			 <tr ng-hide="app.showEntree">
+			 <tr ng-hide="app.showFood">
+        <td><img class="img" src="images/menu13.jpg" alt=""></td>
 				<td class="menuTitle">SWEET AND SOUR</td>
         <td></td>
 				<td>Breaded your choice of meat in house tomato sauce pineapple, onion, cucumber </td>
-				<td>$9</td>
+				<td>90</td>
+        <td><button class="add" ng-click="app.addFood('menu13.jpg','SWEET AND SOUR',90)">Add</button></td>
 			 </tr>
-			 <tr ng-hide="app.showEntree">
+			 <tr ng-hide="app.showFood">
+        <td><img class="img" src="images/menu14.jpg" alt=""></td>
 				<td class="menuTitle">BROCCOLI ON WOK</td>
         <td></td>
 				<td>Sautéed broccoli in oyster sauce with your choice of meat</td>
-				<td>$9</td>
+				<td>90</td>
+        <td><button class="add" ng-click="app.addFood('menu14.jpg','BROCCOLI ON WOK',90)" >Add</button></td>
 			 </tr>
-			 <tr ng-hide="app.showRD">
+			 <tr ng-hide="app.showFood">
+        <td><img class="img" src="images/menu15.jpg" alt=""></td>
 				<td class="menuTitle">THAI FRIED RICE</td>
-        <td><img class="icon" src="images/chili.png" alt=""><img class="icon" src="images/peanut.png" alt=""></td>
+        <td></td>
 				<td>Stir fried jasmine rice with your choice of meat, broccoli, onion, pea, carrot and egg</td>
-				<td>$9</td>
+				<td>90</td>
+        <td><button class="add" ng-click="app.addFood('menu15.jpg','THAI FRIED RICE',90)">Add</button></td>
 			 </tr>
-			 <tr ng-hide="app.showRD">
+			 <tr ng-hide="app.showFood">
+        <td><img class="img" src="images/menu16.jpg" alt=""></td>
 				<td class="menuTitle">SPICY FRIED RICE</td>
-        <td></td>
-				<td>Stir fried jasmine rice with garlic sauce, onion, jalapeno, basil and your choice of meat</td>
-				<td>$9</td>
-			 </tr>
-			 <tr ng-hide="app.showRD">
-				<td class="menuTitle">PINEAPPLE FRIED RICE</td>
-        <td><img class="icon" src="images/peanut.png" alt=""></td>
-				<td>Pineapple, cashew nuts, raisin, egg with jasmine rice and your choice of meat</td>
-				<td>$9</td>
-			 </tr>
-			  <tr ng-hide="app.showRD">
-				<td class="menuTitle">PAD THAI</td>
-        <td></td>
-				<td>Pan-fried rice noodles with eggs, bean sprouts, green onions, tofu and ground peanuts</td>
-				<td>$9</td>
-			 </tr>
-			 <tr ng-hide="app.showRD">
-				<td class="menuTitle">PAD SE-IEW</td>
-        <td><img class="icon" src="images/peanut.png" alt=""></td>
-				<td>Stir-fried wide rice noodles in sweet black soy sauce broccoli, egg and your choice of meat</td>
-				<td>$9</td>
-			 </tr>
-			 <tr ng-hide="app.showRD">
-				<td class="menuTitle">CHICKEN NOODLE</td>
-        <td></td>
-				<td>Wide rice noodles with chicken, egg, bean sprout, onion, peanuts and lettuce</td>
-				<td>$9</td>
-			 </tr>
-			 <tr ng-hide="app.showRD">
-				<td class="menuTitle">SPICY NOODLE </td>
         <td><img class="icon" src="images/chili.png" alt=""></td>
-				<td>Wide rice noodles in garlic sauce with onion, jalapeno and basil with your choice of meat</td>
-				<td>$9</td>
+				<td>Stir fried jasmine rice with garlic sauce, onion, jalapeno, basil and your choice of meat</td>
+				<td>90</td>
+        <td><button class="add" ng-click="app.addFood('menu16.jpg','SPICY FRIED RICE',90)">Add</button></td>
 			 </tr>
-			 <tr ng-hide="app.showRD">
-				<td class="menuTitle">CRYSTAL NOODLE</td>
+			 <tr ng-hide="app.showFood">
+        <td><img class="img" src="images/menu17.jpg" alt=""></td>
+				<td class="menuTitle">PINEAPPLE FRIED RICE</td>
         <td></td>
-				<td>Bean thread noodles stir fried with onions, eggs, broccoli, carrot, bean sprout and choice of meat</td>
-				<td>$9</td>
+				<td>Pineapple, cashew nuts, raisin, egg with jasmine rice and your choice of meat</td>
+				<td>90</td>
+        <td><button class="add" ng-click="app.addFood('menu17.jpg','PINEAPPLE FRIED RICE',90)">Add</button></td>
 			 </tr>
-			 <tr ng-hide="app.showRD">
-				<td class="menuTitle">LARD NA</td>
+       <tr ng-hide="app.showFood">
+        <td><img class="img" src="images/menu18.jpg" alt=""></td>
+				<td class="menuTitle">Chicken Fried</td>
         <td></td>
-				<td>Wide noodles topped with gravy with choice of meat and broccoli</td>
-				<td>$9</td>
+				<td>Chicken Fired serve with  sweet and sour sauce </td>
+				<td>70</td>
+        <td><button class="add" ng-click="app.addFood('menu18.jpg','Chicken Fried',70)" >Add</button></td>
 			 </tr>
+       <tr ng-hide="app.showFood">
+        <td><img class="img" src="images/menu19.jpg" alt=""></td>
+				<td class="menuTitle">Green Curry</td>
+        <td></td>
+				<td>Green curry with pork and chicken   </td>
+				<td>90</td>
+        <td><button class="add" ng-click="app.addFood('menu19.jpg','Chicken Fried',90)">Add</button></td>
+			 </tr>
+       <tr ng-hide="app.showFood">
+        <td><img class="img" src="images/menu20.jpg" alt=""></td>
+				<td class="menuTitle">Papaya Salad</td>
+        <td><img class="icon" src="images/chili.png" alt=""><img class="icon" src="images/peanut.png" alt=""></td>
+				<td>salad papaya    </td>
+				<td>60</td>
+        <td><button class="add" ng-click="app.addFood('menu20.jpg','Papaya Salad',60)">Add</button></td>
+			 </tr>
+      </tbody>
+  <!-- //////////////////   drink -->
 
+    <tr ng-hide="app.showDrink">
+     <td><img class="img" src="images/water.jpg" alt=""></td>
+     <td class="menuTitle">Drinking Water</td>
+     <td></td>
+     <td>10</td>
+    <td><button class="add" ng-click="app.addDrink('water.jpg','Water',10)">Add</button></td>
+    </tr>
+    <tr ng-hide="app.showDrink">
+    <td><img class="img" src="images/leo.png" alt=""></td>
+     <td class="menuTitle">LEO</td>
+     <td></td>
+     <td>60</td>
+     <td><button class="add" ng-click="app.addDrink('leo.png','LEO',10)">Add</button></td>
+    </tr>
+    <tr ng-hide="app.showDrink">
+    <td><img class="img" src="images/pepsi.jpg" alt=""></td>
+     <td class="menuTitle">Pepsi</td>
+     <td></td>
+     <td>25</td>
+     <td><button class="add" ng-click="app.addDrink('pepsi.jpg','pspsi',10)">Add</button></td>
+    </tr>
+    <tr ng-hide="app.showDrink">
+    <td><img class="img" src="images/splash.jpg" alt=""></td>
+     <td class="menuTitle">Splash</td>
+     <td></td>
+     <td>15</td>
+    <td><button class="add" ng-click="app.addDrink('splash.jpg','splash',15)">Add</button></td>
+    </tr>
+    <tr ng-hide="app.showDrink">
+    <td><img class="img" src="images/oishi.jpg" alt=""></td>
+     <td class="menuTitle">Oishi Green Tea</td>
+     <td></td>
+     <td>20</td>
+     <td><button class="add" ng-click="app.addDrink('oishi.jpg','oishi',20)">Add</button></td>
+    </tr>
 		</table>
 
-
-
-
-
-
-
-
+    <!-- paging food -->
+    <center ng-hide="app.showFood">
+      <button ng-click="app.nextPage(1)" ng-disabled="app.pageFood === 1" style="width: 30px;height: 20px;margin: 15px 0px 15px 0px;border-radius: 3px;background-color: honeydew;font-size: 13px;" type="button" name="button"> 1 </button>
+      <button ng-click="app.nextPage(2)" ng-disabled="app.pageFood === 2" style="width: 30px;height: 20px;margin: 15px 0px 15px 0px;border-radius: 3px;background-color: honeydew;font-size: 13px;" type="button" name="button"> 2 </button>
+    </center>
 
             </div>
       </div> <!-- End of Slider-->

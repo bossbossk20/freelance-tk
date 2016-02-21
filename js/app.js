@@ -2,104 +2,36 @@ angular.module('app', [])
   .controller('TodoListController', function() {
     var app = this;
     // app.test=  "hello"
-    app.showApp = false
-    app.showSoup = true
-    app.showSalad = true
-    app.showCurry = true
-    app.showEntree = true
-    app.showRD = true
-     $('.app').addClass( "active" );
+    app.showFood = false
+    app.pageFood = 1
+    app.showDrink = true
 
-    app.app = function(){
-      app.showApp = false
-      app.showSoup = true
-      app.showSalad = true
-      app.showCurry = true
-      app.showEntree = true
-      app.showRD = true
-
-     $('.app').addClass( "active" )
-     $('.soup').removeClass( "active")
-     $('.curry').removeClass( "active" )
-     $('.salad').removeClass("active")
-     $('.entree').removeClass("active")
-     $('.rd').removeClass("active")
-
+    $('.food').addClass( "active" );
+    $('.drink').removeClass("active")
+    app.food = function(){
+      app.showFood = false
+      app.showDrink = true
+      $('.food').addClass( "active" )
+      $('.drink').removeClass( "active")
     }
 
-    app.soup = function(){
-      app.showApp = true
-      app.showSoup = false
-      app.showSalad = true
-      app.showCurry = true
-      app.showEntree = true
-      app.showRD = true
-      $('.soup').addClass("active")
-      $('.app').removeClass( "active")
-      $('.salad').removeClass( "active")
-      $('.curry').removeClass( "active")
-      $('.entree').removeClass( "active")
-      $('.rd').removeClass( "active")
+    app.drink = function(){
+      app.showFood = true
+      app.showDrink = false
+      $('.drink').addClass("active")
+      $('.food').removeClass( "active")
     }
-    app.salad = function(){
-      app.showSalad = false
-      app.showSoup = true
-      app.showApp = true
-      app.showCurry = true
-      app.showEntree = true
-      app.showRD = true
-      $('.salad').addClass("active")
-      $('.app').removeClass( "active")
-      $('.soup').removeClass( "active")
-      $('.curry').removeClass( "active")
-      $('.entree').removeClass( "active")
-      $('.rd').removeClass( "active")
+
+    app.nextPage = function(page){
+      app.pageFood = parseInt(page)
+      console.log('hhh')
     }
-    app.curry = function(){
-      app.showApp = true
-      app.showSalad = true
-      app.showCurry = false
-      app.showSoup  = true
-      app.showEntree = true
-      app.showRD = true
-      $('.curry').addClass("active")
-      $('.app').removeClass( "active")
-      $('.salad').removeClass( "active")
-      $('.soup').removeClass( "active")
-      $('.entree').removeClass( "active")
-      $('.rd').removeClass( "active")
+    app.addFood = function(img,title,price){
+      console.log(img,title,price);
 
     }
-     app.entree = function(){
-      app.showApp = true
-      app.showSalad = true
-      app.showCurry = true
-      app.showSoup  = true
-      app.showEntree = false
-      app.showRD = true
-      $('.entree').addClass('active')
-      $('.app').removeClass( "active")
-      $('.salad').removeClass( "active")
-      $('.curry').removeClass( "active")
-      $('.soup').removeClass( "active")
-      $('.rd').removeClass( "active")
-
-
-    }
-    app.rd = function(){
-      app.showApp = true
-      app.showSalad = true
-      app.showCurry = true
-      app.showSoup  = true
-      app.showEntree = true
-      app.showRD = false
-      $('.rd').addClass('active')
-      $('.app').removeClass( "active")
-      $('.salad').removeClass( "active")
-      $('.curry').removeClass( "active")
-      $('.entree').removeClass( "active")
-      $('.soup').removeClass( "active")
-
+    app.addDrink = function(img,title,price){
+        console.log(img,title,price);
     }
 
 

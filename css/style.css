@@ -21,7 +21,10 @@ body { margin:0px; padding:0px; font-family:hansen; font-size:20px;}
 .logo{
 
 }
-
+.img{
+  width: 130px;
+  height:130px;;
+}
 .icon{
   width: auto;
   height: 30px;
@@ -72,7 +75,11 @@ animation:rubberBand 0.9s; -webkit-animation:rubberBand 0.9s;}
 /*.headerwrapper nav li a :hover{background:#ff5a0b; border-radius:5px; color:white; transition:all 0.5s ;
  animation:rubberBand 0.9s; -webkit-animation:rubberBand 0.9s;}*/
 
-
+.add{
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+}
 /*||||||||||||||||||||||||||||||||| SLIDER ||||||||||||||||||||||||||||||*/
 .sliderwrapper {
   background:url(../images/thai2.jpeg);
@@ -97,7 +104,7 @@ float:left; margin-left:45px;}
 .sliderwrapperMenu .slider {
 	position: relative;
 	width: 100%;
-	height: 500px;
+	height: auto;
 	overflow: hidden;
 }
 
